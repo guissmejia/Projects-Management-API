@@ -12,6 +12,7 @@ function employeesAPI(app) {
     const { project } = req.query;
     try {
       const employees = await employeesService.getEmployees({ project });
+      //throw new Error('Error getting employees');
 
       res.status(200).json({
         data: employees,

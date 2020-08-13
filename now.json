@@ -1,0 +1,12 @@
+{
+  "name": "projects-management",
+  "version": 2,
+  "builds": [{ "src": "index.js", "use": "@now/node" }],
+  "routes": [{ "src": "/(.*)", "dest": "/index.js" }],
+  "env": {
+    "DB_USER": "@projects-management-db-user",
+    "DB_PASSWORD": "@projects-management-db-password",
+    "DB_HOST": "@projects-management-db-host",
+    "DB_NAME": "@projects-management-db-name"
+  }
+}
