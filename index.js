@@ -1,5 +1,6 @@
 const express = require('express');
 const app = express();
+const cors = require('cors');
 const { config } = require('./config/index');
 
 const employeesAPI = require('./routes/employees-routes');
@@ -11,6 +12,9 @@ const notFoundHandler = require('./utils/middleware/notFoundHandler');
 
 //body parser
 app.use(express.json());
+
+//Cors
+app.use(cors())
 
 employeesAPI(app);
 projectsAPI(app);
